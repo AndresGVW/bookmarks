@@ -107,3 +107,12 @@ LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# python-social-auth settings
+AUTHENTICATION_BACKENDS = (
+    # 'social.backends.facebook.Facebook2OAuth2',
+    # 'social.backends.google.GoogleOAuth2',
+    # 'social.backends.twitter.TwitterOAuth',
+
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+)
